@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from aiogram import Bot, types
 import aiogram
 from aiogram.dispatcher import Dispatcher
