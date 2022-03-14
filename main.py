@@ -9,7 +9,7 @@ bot = Dispatcher(b)
 
 @bot.message_handler(commands="start")
 async def st(message):
-    await message.reply("Salom men ishlayabman")
+    await message.reply(f'Salom <b><a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a></b> men ishlayabman', parse_mode='HTML')
 
 
 @bot.message_handler(commands="test")
