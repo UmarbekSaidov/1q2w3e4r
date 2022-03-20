@@ -31,7 +31,7 @@ async def feedback(message):
 async def podpis(message):
     if message.chat.type == 'channel':
         t = message.text
-        await message.edit_text(f'{t}\n\n<a href="https://t.me/{message.chat.username}/{message.message_id}">Teran Pikrlaydiganlar Uchun</a>', parse_mode='HTML', disable_web_page_preview=True)
+        await message.edit_text(f'<b>{t}</b>\n\n<a href="https://t.me/{message.chat.username}/{message.message_id}">Teran Pikrlaydiganlar Uchun</a>', parse_mode='HTML', disable_web_page_preview=True)
 
         #  await message.edit_text(f'{t}\n\n© <b>{message.author_signature}</b>\n\n<a href="https://t.me/{message.chat.username}/{message.message_id}">Teran Pikrlaydiganlar Uchun</a>', parse_mode='HTML', disable_web_page_preview=True)
 
@@ -40,7 +40,7 @@ async def podpis(message):
 async def photopodpis(message):
     if message.chat.type == 'channel':
         if message.caption is not None:
-            await message.edit_caption(f'{message.caption}\n\n<a href="https://t.me/{message.chat.username}/{message.message_id}">Teran Pikrlaydiganlar Uchun</a>', parse_mode='HTML')
+            await message.edit_caption(f'<b>{message.caption}</b>\n\n<a href="https://t.me/{message.chat.username}/{message.message_id}">Teran Pikrlaydiganlar Uchun</a>', parse_mode='HTML')
         else:
             await message.edit_caption(f'\n\n<a href="https://t.me/{message.chat.username}/{message.message_id}">Teran Pikrlaydiganlar Uchun</a>', parse_mode='HTML')
 
